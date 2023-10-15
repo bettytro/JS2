@@ -67,7 +67,7 @@ function displayUserProfile(profileData) {
     profileDiv.innerHTML = `
 <img width="300" src="${profileData.avatar}" alt="${profileData.name}'s profile picture" />
 <h2>${profileData.name}</h2>
-<div class="flex gap1 just-between">
+<div class="flex gap1 just-between mob-col">
 <p>${profileData.email}</p>
 <div class="flex gap1">
 <p>Followers: ${profileData._count.followers}</p>
@@ -119,7 +119,7 @@ function fetchUserPosts(name) {
 function createUserPostElement(post) {
     const postDiv = document.createElement("div");
     const titleAndBodyDiv = document.createElement("div");
-    titleAndBodyDiv.className = "title-and-body flex just-between pad1";
+    titleAndBodyDiv.className = "title-and-body flex just-between pad1 mob-col";
     postDiv.appendChild(titleAndBodyDiv);
     postDiv.className = "user-post flex column gap1 post";
     const postLeftDiv = document.createElement("div");

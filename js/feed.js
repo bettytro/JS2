@@ -148,6 +148,7 @@ function displayPosts(posts) {
     if (postOffset === 0) {
         postsContainer.innerHTML = "";
     }
+    
 
     posts.forEach((post) => {
         const postElement = createPostElement(post);
@@ -168,9 +169,10 @@ function displayPosts(posts) {
  clicks on the id it will take them to the post page for that post */
 
 function createPostElement(post) {
+  
     const postDiv = document.createElement("div");
     postDiv.className = "post flex column gap1";
-  
+
     const titleAndBodyDiv = document.createElement("div");
     titleAndBodyDiv.className = "title-and-body";
   
@@ -204,6 +206,9 @@ function createPostElement(post) {
       tagsDiv.className = "flex gap1";
   
       post.tags.forEach((tag) => {
+        if (tag.length === 0) {
+          return;
+        }
         const tagElement = document.createElement("a");
         tagElement.textContent = tag;
         tagElement.className = "tag";
@@ -216,7 +221,7 @@ function createPostElement(post) {
   
         tagsDiv.appendChild(tagElement);
       });
-  
+      
       postDiv.appendChild(tagsDiv);
     }
     if(post.id) {
@@ -226,8 +231,10 @@ function createPostElement(post) {
         id.textContent = `${post.id}`;
         postDiv.appendChild(id);
     }
-  
-    return postDiv;
+
+      return postDiv;
+    
+
   };
 
 fetchAndDisplayPosts();
