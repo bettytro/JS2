@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your feed on Social Connections">
+  <title>Feed | Social Connection</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="js/feed.js" defer></script>
+  <script src="js/feedProfile.js" defer></script>
+  <script src="js/createPost.js" defer></script>
+  <script src="js/logout.js" defer></script>
+</head>
+
+<body>
+  <header class="pad1">
+    <div class="page-width flex align-center just-between">
+      <a href="feed.html"><img src="logo.webp" alt="Social Connections - To the feed"></a>
+      <nav>
+        <ul class="flex align-center gap1">
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="javascript:;" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-width">
+    <section class="flex gap1 mob-col">
+      <div class="col1 flex1 flex column gap1">
+        <div id="profile" class="flex column gap1 profile"></div>
+        <form id="filter-form" class="profile flex column gap1">
+          <div>
+            <label for="_tag">Search</label>
+            <input type="text" id="_tag" name="_tag">
+          </div>
+          <input type="submit" value="Search for tag">
+        </form>
+        <form id="active-form" class="profile flex column gap1">
+          <div class="flex gap1 align-center">
+            <label for="active">Active: </label>
+            <input type="checkbox" id="active" name="active">
+          </div>
+          <input type="submit" value="Filter">
+        </form>
+      </div>
+      <div class="col2 flex3">
+        <h1 class="visually-hidden">Feed</h1>
+        <div id="posts-container">
+        </div>
+        <button class="button" id="load-more">Load more</button>
+      </div>
+      <div class="col3 flex1 flex column gap1">
+        <h2>Create Post</h2>
+        <form id="create-post-form" class="flex column gap1 profile">
+          <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div>
+            <label for="body">Body</label>
+            <textarea id="body" name="body"></textarea>
+          </div>
+          <div>
+            <label for="tags">Tags (comma-separated)</label>
+            <input type="text" id="tags" name="tags">
+          </div>
+          <div>
+            <label for="media">Media URL</label>
+            <input type="text" id="media" name="media">
+          </div>
+          <input type="submit" value="Create Post">
+
+        </form>
+        <div id="error-box" class="hidden"></div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <footer class="flex align-center just-center">
+      <p>© 2023 Social Connections</p>
+  </footer>
+  </footer>
+</body>
+
+</html>

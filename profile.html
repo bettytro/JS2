@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your profile page on Social Connections. Find your friends and much more.">
+    <title>User Profile | Social Connection</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/profile.js" defer></script>
+    <script src="js/logout.js" defer></script>
+
+</head>
+<body>
+    <header class="pad1">
+        <div class="page-width flex align-center just-between">
+            <a href="feed.html"><img src="logo.webp" alt="Social Connections - To the feed"></a>
+            <nav>
+                <ul class="flex align-center gap1">
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-width">
+            <h1 class="visually-hidden">Profile</h1>
+            <div id="profile-container"></div>
+            <h2 class="marg1">Latest Posts</h2>
+            <div id="posts-container"></div>
+        </section>
+    </main>
+        <footer class="flex align-center just-center">
+            <p>© 2023 Social Connections</p>
+    </footer>
+</body>
+</html>

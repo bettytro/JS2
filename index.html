@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Social Connections here. Your favorite Social Network.">
+    <title>Log in or register</title>
+    <script src="js/login.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="flex align-center just-center vh100">
+        <section class="flex column align-center just-center gap1 login">
+            <img width="300" src="logo.webp" alt="Social Connections">
+            <h1>Log in</h1>
+            <form id="login" method="POST" name="login" class="flex column gap1">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                </div>
+                <input type="submit" value="Log in">
+            </form>
+            <div>
+                <p>Not registered yet? <a href="register.html">Register here</a></p>
+            </div>
+            <div id="error-box" class="hidden">
+            </div>
+
+            </section>
+    </main>
+    <footer class="flex align-center just-center">
+        <p>© 2023 Social Connections</p>
+    </footer>
+</body>
+</html>

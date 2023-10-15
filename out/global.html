@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Global</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="logoutButton"><span class="type-signature">(constant) </span>logoutButton<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    here we listen for the logout button click event and remove the user and accessToken from local storage
+ and redirect the user to the login page
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="logout.js.html">logout.js</a>, <a href="logout.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="urlParams"><span class="type-signature">(constant) </span>urlParams<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    this function checks if we have a user name in the query string (i.e we came from the feed or is on someone elses profile page)
+ if we do, we fetch the user profile and posts for that user
+ if not, we check if we have a user name in localStorage (i.e we came from the login page)
+ if we do, we fetch the user profile and posts for that user
+ if not, we log an error to the console
+ this is because of reusability.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="profile.js.html">profile.js</a>, <a href="profile.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="applyTagFilter"><span class="type-signature"></span>applyTagFilter<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function is called when the user clicks the "Search" button
+ it grabs the value from the tag input field and sets the currentFilters
+ object to the tag value. It then resets the postOffset to 0 and calls
+ fetchAndDisplayPosts() to fetch and display the posts with the new filter
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="feed.js.html">feed.js</a>, <a href="feed.js.html#line34">line 34</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createEditDeleteButtons"><span class="type-signature"></span>createEditDeleteButtons<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function creates the edit and delete buttons for a post
+ it takes the post object as a parameter
+ it returns a div element with the edit and delete buttons
+ it also adds event listeners to the edit and delete buttons
+ the edit button displays a form to edit the post
+ the delete button deletes the post
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="postFunctions.js.html">postFunctions.js</a>, <a href="postFunctions.js.html#line82">line 82</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createUserPostElement"><span class="type-signature"></span>createUserPostElement<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    this function creates the HTML for a post that we show on the user profile page
+ it takes a post object as a parameter and returns the HTML for the post
+ it also uses the createEditDeleteButtons function to create the edit and
+ delete buttons for each post
+ This function is almost identical to the one in postFunctions.js, but I didn't want to mess with the original code
+ as it creates different html elements.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="profile.js.html">profile.js</a>, <a href="profile.js.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="deletePost"><span class="type-signature"></span>deletePost<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function lets you delete a post with HTTP DELETE
+it takes the post ID as a parameter
+it uses the access token from localStorage to authenticate the request
+if the request is successful it reloads the page
+if the request fails it logs the error to the console
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="postFunctions.js.html">postFunctions.js</a>, <a href="postFunctions.js.html#line47">line 47</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="displaySinglePost"><span class="type-signature"></span>displaySinglePost<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function displays a single post on the page
+ it takes the post object and the container element as parameters
+ it displays the post title, body, media, updated timestamp, tags and ID
+ it also adds event listeners to the tags and ID
+ the tags are not clickable as we don't filter posts by tags on the single post page
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="postFunctions.js.html">postFunctions.js</a>, <a href="postFunctions.js.html#line187">line 187</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="displayUserPosts"><span class="type-signature"></span>displayUserPosts<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function fetches the user's posts from the API and displays them on the page
+ it uses the userName variable to determine which user's posts to fetch
+ it uses the accessToken variable to send the access token to the API.
+ it also uses the createUserPostElement function to create the HTML for each post
+ it also uses the createEditDeleteButtons function to create the edit and
+ delete buttons for each post
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="profile.js.html">profile.js</a>, <a href="profile.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="displayUserProfile"><span class="type-signature"></span>displayUserProfile<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function takes a profile object and displays it on the page
+it also uses a default profile picture if the user has not set a profile picture
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="feedProfile.js.html">feedProfile.js</a>, <a href="feedProfile.js.html#line47">line 47</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="displayUserProfile"><span class="type-signature"></span>displayUserProfile<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function takes a profile object and displays it on the page
+ it also uses a default profile picture if the user has not set a profile picture
+ this probably could've been reused, but I didn't want to mess with the original code
+ as it creates different html elements than the one in feedprofile.js
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="profile.js.html">profile.js</a>, <a href="profile.js.html#line64">line 64</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="editPost"><span class="type-signature"></span>editPost<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function lets you edit a post with HTTP PUT
+ it takes the post ID and the updated data as parameters
+ it uses the access token from localStorage to authenticate the request
+ it also uses the updated data to update the post
+ if the request is successful it reloads the page
+ if the request fails it logs the error to the console
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="postFunctions.js.html">postFunctions.js</a>, <a href="postFunctions.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="fetchAndDisplayUserProfile"><span class="type-signature"></span>fetchAndDisplayUserProfile<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function fetches the user profile from the API and displays it on the page
+ it uses the profileName variable to determine which user profile to fetch
+ it uses the accessToken variable to send the access token to the API.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="feedProfile.js.html">feedProfile.js</a>, <a href="feedProfile.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="fetchSinglePost"><span class="type-signature"></span>fetchSinglePost<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function fetches a single post from the API
+ it takes the post ID as a parameter
+ it uses the access token from localStorage to authenticate the request
+ if the request is successful it displays the post on the page
+ if the request fails it logs the error to the console
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="postFunctions.js.html">postFunctions.js</a>, <a href="postFunctions.js.html#line149">line 149</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="fetchUserProfile"><span class="type-signature"></span>fetchUserProfile<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function fetches the user profile from the API and displays it on the page
+ it uses the userName variable to determine which user profile to fetch
+ it uses the accessToken variable to send the access token to the API.
+ it also uses the displayUserProfile function to display the user profile on the page
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="profile.js.html">profile.js</a>, <a href="profile.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isValidEmail"><span class="type-signature"></span>isValidEmail<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    this function checks if the email is of the correct domain
+ in this case the domain is noroff.no or stud.noroff.no
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="login.js.html">login.js</a>, <a href="login.js.html#line62">line 62</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isValidEmail"><span class="type-signature"></span>isValidEmail<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    this function checks if the email is of the correct domain
+ in this case the domain is noroff.no or stud.noroff.no
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="register.js.html">register.js</a>, <a href="register.js.html#line58">line 58</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#applyTagFilter">applyTagFilter</a></li><li><a href="global.html#createEditDeleteButtons">createEditDeleteButtons</a></li><li><a href="global.html#createUserPostElement">createUserPostElement</a></li><li><a href="global.html#deletePost">deletePost</a></li><li><a href="global.html#displaySinglePost">displaySinglePost</a></li><li><a href="global.html#displayUserPosts">displayUserPosts</a></li><li><a href="global.html#displayUserProfile">displayUserProfile</a></li><li><a href="global.html#editPost">editPost</a></li><li><a href="global.html#fetchAndDisplayUserProfile">fetchAndDisplayUserProfile</a></li><li><a href="global.html#fetchSinglePost">fetchSinglePost</a></li><li><a href="global.html#fetchUserProfile">fetchUserProfile</a></li><li><a href="global.html#isValidEmail">isValidEmail</a></li><li><a href="global.html#logoutButton">logoutButton</a></li><li><a href="global.html#urlParams">urlParams</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Oct 15 2023 11:37:05 GMT+0200 (sentraleuropeisk sommertid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
