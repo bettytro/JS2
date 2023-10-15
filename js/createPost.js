@@ -33,6 +33,7 @@ createPostForm.addEventListener("submit", function (e) {
     .then((response) => {
       if (response.ok) {
         createPostForm.reset();
+        window.location.reload();
       } else {
         errorBox.innerHTML = "<p>Failed to create the post</p>";
         errorBox.classList.remove("hidden");
